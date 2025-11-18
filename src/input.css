@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@layer utilities {
+  .bg-restaurant {
+    background-image: url(./Images/background/restaurant-bcg.jpg);
+  }
+}
