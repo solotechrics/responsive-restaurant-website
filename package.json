@@ -1,0 +1,17 @@
+{
+  "name": "responsive-restaurant-website",
+  "version": "1.0.0",
+  "description": "“A fully responsive restaurant website built with HTML, Tailwind CSS &amp; JavaScript”\r # 🍽️ Responsive Restaurant Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "code": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+
+  },
+  "author": "solorics",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  }
+}
