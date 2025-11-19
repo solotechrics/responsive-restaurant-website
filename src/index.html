@@ -1,104 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Felipa&family=Lexend+Exa:wght@100..900&family=Tangerine:wght@400;700&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bellefair&family=Felipa&family=Lexend+Exa:wght@100..900&family=Tangerine:wght@400;700&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap"
-    rel="stylesheet">
-  <link href="./output.css" rel="stylesheet">
-</head>
-
-<body class="bg-restaurant h-screen bg-cover bg-center relative">
-  <header>
-    <nav>
-      <div class="navbar text-white flex justify-between px-12 lg:justify-evenly md:justify-between md:px-12 gap-x-16 items-center py-6 bg-white/-10 backdrop-blur-sm fixed top-0 left-0 w-full">
-
-        <!-- Logo -->
-        <div class="logo flex items-center">
-          <span class="logo-taste font-felipa font-extrabold">Taste<span class="logo-delight font-tangerine font-extrabold">Delight</span></span>
-        </div>
-
-        <!-- Desktop Menu -->
-        <div class="nav-items nav-links hidden lg:flex">
-          <ul class="flex justify-evenly gap-6">
-            <a href="#">
-              <li>Home</li>
-            </a>
-            <a href="#">
-              <li>About</li>
-            </a>
-            <a href="#">
-              <li>Menu</li>
-            </a>
-            <a href="#">
-              <li>Book a Table</li>
-            </a>
-            <a href="#">
-              <li>Chefs</li>
-            </a>
-            <a href="#">
-              <li>Events</li>
-            </a>
-            <a href="#">
-              <li>Contact</li>
-            </a>
-          </ul>
-        </div>
-
-        <div class="flex items-center gap-6">
-          <!-- Book Table Button (Desktop) -->
-          <div class="nav-btn hidden md:flex">
-            <a href="#"><button class="cursor-pointer">Book a Table</button></a>
+  <body class="bg-restaurant h-screen bg-cover bg-center relative">
+    <header>
+      <nav>
+        <div
+          class="navbar text-white flex justify-between px-12 lg:justify-evenly md:justify-between md:px-12 gap-x-16 items-center py-6 bg-white/-10 backdrop-blur-sm fixed top-0 left-0 w-full z-50"
+        >
+          <!-- Logo -->
+          <div class="logo flex items-center">
+            <span class="logo-taste font-felipa font-extrabold"
+              >Taste<span class="logo-delight font-tangerine font-extrabold"
+                >Delight</span
+              ></span
+            >
           </div>
-          
-          <!-- Hamburger Button (Mobile) -->
-          <div class="lg:hidden">
-            <button id="menu-btn" class="focus:outline-none cursor-pointer">
-              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+
+          <!-- Desktop Menu -->
+          <div class="nav-items nav-links hidden lg:flex">
+            <ul class="flex justify-evenly gap-6">
+              <a href="#">
+                <li>Home</li>
+              </a>
+              <a href="#">
+                <li>About</li>
+              </a>
+              <a href="#">
+                <li>Menu</li>
+              </a>
+              <a href="#">
+                <li>Book a Table</li>
+              </a>
+              <a href="#">
+                <li>Chefs</li>
+              </a>
+              <a href="#">
+                <li>Events</li>
+              </a>
+              <a href="#">
+                <li>Contact</li>
+              </a>
+            </ul>
+          </div>
+
+          <div class="flex items-center gap-6">
+            <!-- Book Table Button (Desktop) -->
+            <div class="nav-btn hidden md:flex">
+              <a href="#"
+                ><button class="cursor-pointer">Book a Table</button></a
+              >
+            </div>
+
+            <!-- Hamburger Button (Mobile) -->
+            <button
+              id="menu-btn"
+              class="cursor-pointer lg:hidden relative flex items-center mr-4 z-50"
+            >
+              <svg
+                id="hamburger-icon"
+                class="w-7 h-7 transition-all duration-300 absolute"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+
+              <!-- Close (X) Icon -->
+              <svg
+                id="close-icon"
+                class="w-7 h-7 absolute transition-all duration-300 opacity-0 rotate-90 cursor-pointer pointer-events-auto"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>
+
+          <!-- Mobile Menu -->
+          <div
+            id="mobile-menu"
+            class="lg:hidden bg-black/50 backdrop-blur-sm fixed top-0 left-0 w-full h-screen shadow-2xl filter drop-shadow-2xl px-12 transition-all duration-300 ease-in-out md:h-60 hidden z-40"
+          >
+            <ul
+              class="flex-col flex gap-12 text-white text-xl pl-12 pt-12 mt-14 font-bellefair md:flex-row justify-center"
+            >
+              <a href="#">
+                <li>Home</li>
+              </a>
+              <a href="#">
+                <li>About</li>
+              </a>
+              <a href="#">
+                <li>Menu</li>
+              </a>
+              <a href="#">
+                <li>Book a Table</li>
+              </a>
+              <a href="#">
+                <li>Chefs</li>
+              </a>
+              <a href="#">
+                <li>Events</li>
+              </a>
+              <a href="#">
+                <li>Contact</li>
+              </a>
+            </ul>
+          </div>
         </div>
-       
+      </nav>
+    </header>
 
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-black/50 backdrop-blur-sm fixed top-0 left-0 w-full h-screen shadow-2xl filter drop-shadow-2xl px-12 transition-all duration-300 ease-in-out">
-          <ul class="flex-col flex gap-12 py-4 text-white text-xl pl-12 pt-12 mt-24 font-bellefair">
-            <a href="#">
-              <li>Home</li>
-            </a>
-            <a href="#">
-              <li>About</li>
-            </a>
-            <a href="#">
-              <li>Menu</li>
-            </a>
-            <a href="#">
-              <li>Book a Table</li>
-            </a>
-            <a href="#">
-              <li>Chefs</li>
-            </a>
-            <a href="#">
-              <li>Events</li>
-            </a>
-            <a href="#">
-              <li>Contact</li>
-            </a>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-
-  <script src="./script.js"></script>
-</body>
-
+    <script src="./script.js"></script>
+  </body>
 </html>

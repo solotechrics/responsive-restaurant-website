@@ -15,6 +15,7 @@
 
   /* Breakpoint */
   --breakpoint-lg: 70rem;
+  --breakpoint-md: 60rem;
 }
 
 @layer components {
