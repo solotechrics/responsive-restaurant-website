@@ -5,3 +5,36 @@
     background-image: url(./Images/background/restaurant-bcg.jpg);
   }
 }
+
+@theme {
+  --font-tangerine: "Tangerine", cursive;
+  --font-felipa: "Felipa", serif;
+  --font-bellefair: "Bellefair", serif;
+  --font-vendSans: "Vend Sans", sans-serif;
+  --font-lexend: "Lexend Exa", sans-serif;
+
+  /* Breakpoint */
+  --breakpoint-lg: 70rem;
+}
+
+@layer components {
+  .logo {
+    @apply text-4xl
+  }
+
+  .logo-taste {
+    @apply text-red-800
+  }
+
+  .logo-delight {
+    @apply text-yellow-400
+  }
+
+  .nav-links {
+    @apply font-bellefair text-xl font-bold
+  }
+
+  .nav-btn {
+    @apply font-lexend font-light bg-red-900 py-2 px-4 rounded-full
+  }
+}
