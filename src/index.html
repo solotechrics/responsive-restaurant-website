@@ -146,7 +146,7 @@
       </div>
     </nav>
 
-    <header id="#home" class="hero">
+    <header id="#home" class="hero container">
       <!-- content cell -->
       <!-- left Section -->
       <div class="hero-left">
@@ -192,13 +192,73 @@
       <div
         class="hero-image relative order-1 lg:order-2 w-full overflow-hidden"
       >
-        <img
-          src="./Images/restaurant gallery/carousel1.jpg"
-          alt=""
-          class="w-full object-cover h-[55vh] md:h-full"
-        />
+      <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
+
+        <div class="min-w-full">
+          <img src="./Images/restaurant gallery/carousel5.jpg" alt="" class="w-full object-cover h-[55vh] md:h-full" />
+        </div>
+        
+      <div class="min-w-full">
+        <img src="./Images/restaurant gallery/carousel1.jpg" alt="" class="w-full object-cover h-[55vh] md:h-full" />
+      </div>
+
+      <div class="min-w-full">
+        <img src="./Images/restaurant gallery/carousel2.jpg" alt="" class="w-full object-cover h-[55vh] md:h-full" />
+      </div>
+
+      <div class="min-w-full">
+        <img src="./Images/restaurant gallery/carousel3.jpg" alt="" class="w-full object-cover h-[55vh] md:h-full" />
+      </div>
+
+      <div class="min-w-full">
+        <img src="./Images/restaurant gallery/carousel4.jpg" alt="" class="w-full object-cover h-[55vh] md:h-full" />
+      </div>
+
+      <div class="min-w-full">
+        <img src="./Images/restaurant gallery/carousel5.jpg" alt="" class="w-full object-cover h-[55vh] md:h-full" />
+      </div>
+
+      <div class="min-w-full">
+        <img src="./Images/restaurant gallery/carousel1.jpg" alt="" class="w-full object-cover h-[55vh] md:h-full" />
+      </div>
+
+      </div>
+       
+      <button id="prev"
+        class="prev">‹</button>
+      <button id="next"
+        class="next">›</button>
       </div>
     </header>
+
+
+    <main>
+      <section id="about" class="container relative py-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center text-white">
+          <div class="about-left">
+            <h2 class="text-3xl text-gray-200 font-bellefair font-bold">A Journey of Flavor & Heart</h2>
+            <p class="italic font-bellefair text-lg">A journey of flavor and heart begins in our kitchen, where every dish is prepared with care, passion, and a deep respect
+            for fresh ingredients.</p> 
+            
+            <p class="text-gray-200">Every recipe we create is a reflection of our commitment to quality, crafted thoughtfully to honor both tradition and
+            innovation.</p>
+
+            <div class="quote animate-slideUp">
+              <img src="" alt="" class="thumbail">
+              <blockquote>
+                "Cooking is a beautiful expression of love, because every meal prepared with care becomes a silent message of warmth and
+                affection".
+              </blockquote>
+            </div>
+          </div>
+          <div class="about-right">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="./script.js"></script>
   </body>

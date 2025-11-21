@@ -64,7 +64,7 @@
   }
 
   .hero-btns {
-    @apply w-full flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-4;
+    @apply w-full flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-4 xl:flex-row md:flex-col md:items-start;
   }
 
   .hero-btn {
@@ -90,4 +90,44 @@
   .mobile-menu-inner {
     @apply flex-col flex gap-8 text-white text-lg pl-6 pt-6 mt-12 font-bellefair md:flex-row justify-center;
   }
+
+  .container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-16
+  }
+
+  .about-left {
+    @apply flex flex-col gap-8
+  }
+
+  .quote {
+    @apply bg-red-900/10 backdrop-blur-sm rounded-md px-12 py-6 text-2xl leading-loose italic font-bellefair transition-all duration-500 hover:scale-105 hover:text-red-500 hover:shadow-lg translate-y-4;
+  }
+
+ @keyframes slideUp {
+  from { opacity: 0; transform: translateY(1rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+ .animate-slideUp {
+  animation: slideUp 1s ease-out forwards;
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.animate-typewriter {
+  animation: typewriter 3s steps(30) forwards;
+  @apply border-gray-700;
+}
+
+.prev {
+  @apply absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/20 py-1 px-2 rounded-full hover:bg-yellow-500/20 text-5xl text-white text-center
+}
+
+.next {
+  @apply absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/20 py-1 px-2 rounded-full hover:bg-yellow-500/20 text-5xl text-white text-center
+}
+
 }
