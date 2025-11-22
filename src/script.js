@@ -63,3 +63,27 @@ setInterval(() => {
 }, 5000); // every 3 seconds
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".tab-btn");
+  const wrappers = document.querySelectorAll(".tab-wrapper");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const tabId = button.getAttribute("data-tab");
+
+      // Hide all tab wrappers
+      wrappers.forEach(wrapper => wrapper.classList.add("hidden"));
+      document.getElementById(tabId).classList.remove("hidden");
+
+      // Reset all buttons
+      buttons.forEach(btn => {
+        btn.classList.remove("bg-yellow-100", "text-black");
+        btn.classList.add("bg-gray-800", "text-white");
+      });
+
+      // Highlight selected button
+      button.classList.remove("bg-gray-800", "text-white");
+      button.classList.add("bg-yellow-100", "text-black");
+    });
+  });
+});
