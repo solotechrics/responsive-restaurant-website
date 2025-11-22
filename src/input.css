@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+:root {
+  --surface-color: #ffffff;
+}
+
 @layer utilities {
   .bg-restaurant {
     background-image: url(./Images/background/restaurant-bcg.jpg);
@@ -103,66 +107,106 @@
     @apply bg-red-900/10 backdrop-blur-sm rounded-md px-12 py-6 text-2xl leading-loose italic font-bellefair transition-all duration-500 hover:scale-105 hover:text-red-500 hover:shadow-lg translate-y-4;
   }
 
- @keyframes slideUp {
-  from { opacity: 0; transform: translateY(1rem); }
-  to { opacity: 1; transform: translateY(0); }
-}
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
- .animate-slideUp {
-  animation: slideUp 1s ease-out forwards;
-}
+  .animate-slideUp {
+    animation: slideUp 1s ease-out forwards;
+  }
 
-@keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
-}
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
 
-.animate-typewriter {
-  animation: typewriter 3s steps(30) forwards;
-  @apply border-gray-700;
-}
+  .animate-typewriter {
+    animation: typewriter 3s steps(30) forwards;
+    @apply border-gray-700;
+  }
 
-.prev {
-  @apply absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/20 py-1 px-2 rounded-full hover:bg-yellow-500/20 text-5xl text-white text-center;
-}
+  .prev {
+    @apply absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/20 py-1 px-2 rounded-full hover:bg-yellow-500/20 text-5xl text-white text-center;
+  }
 
-.next {
-  @apply absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/20 py-1 px-2 rounded-full hover:bg-yellow-500/20 text-5xl text-white text-center;
-}
+  .next {
+    @apply absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/20 py-1 px-2 rounded-full hover:bg-yellow-500/20 text-5xl text-white text-center;
+  }
 
-.features {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 space-x-12 ;
-}
+  .features {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 space-x-12;
+  }
 
-.labels {
-  @apply flex flex-col items-center justify-center text-center gap-2 px-4 py-8 hover:scale-105 hover:text-yellow-500 transition-all duration-500 hover:shadow-lg translate-y-4;
-}
+  .labels {
+    @apply flex flex-col items-center justify-center text-center gap-2 px-4 py-8 hover:scale-105 hover:text-yellow-500 transition-all duration-500 hover:shadow-lg translate-y-4;
+  }
 
-.feature-heading {
-  @apply text-xl font-bold font-bellefair;
-}
+  .feature-heading {
+    @apply text-xl font-bold font-bellefair;
+  }
 
-.feature-paragraph {
-  @apply text-sm text-gray-400 font-bold;
-}
- .fa {
-  @apply text-red-400/60 text-6xl mb-2;
-}
+  .feature-paragraph {
+    @apply text-sm text-gray-400 font-bold;
+  }
+  .fa {
+    @apply text-red-400/60 text-6xl mb-2;
+  }
 
-.achievments{
-  @apply   mx-auto grid grid-cols-1 md:grid-cols-4 items-center text-center p-12 mt-8 bg-black/40 gap-10;
-}
+  .achievments {
+    @apply mx-auto grid grid-cols-1 md:grid-cols-4 items-center text-center p-12 mt-8 bg-black/40 gap-10;
+  }
 
-.stats {
-  @apply text-white flex flex-col justify-center
-}
+  .stats {
+    @apply text-white flex flex-col justify-center;
+  }
 
-.stats-heading {
-  @apply text-5xl font-bold font-lexend text-yellow-600/50
-}
+  .stats-heading {
+    @apply text-5xl font-bold font-lexend text-yellow-600/50;
+  }
 
-.stats-p {
-  @apply text-xl text-gray-400
-}
+  .stats-p {
+    @apply text-xl text-gray-400;
+  }
 
+  .menu-img {
+    @apply w-[100px] h-[100px] object-cover hover:transition-transform duration-300 hover:scale-105 rounded-xl;
+  }
+
+  .menu-cards {
+    @apply p-5 rounded-lg bg-(--surface-color)/20 backdrop-blur-sm
+shadow-[0_3px_10px_rgba(0,0,0,0.05)]
+transition-all duration-300 ease-in-out
+hover:-translate-y-2 hover:shadow-[0_6px_20px_rgba(0,0,0,0.12)] text-white flex items-center gap-6;
+  }
+
+  .card-info {
+    @apply flex flex-col space-y-2;
+  }
+
+  .menu-span {
+    @apply text-yellow-500 text-sm bg-yellow-500/10 inline-block px-4 py-1 rounded-full
+  }
+
+  .card-heading {
+    @apply text-lg font-semibold
+  }
+
+  .menu-p {
+    @apply text-gray-300 text-sm
+  }
+
+  .menu-price {
+    @apply font-bold mt-2 text-yellow-500 text-lg
+  }
 }
