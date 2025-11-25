@@ -558,12 +558,6 @@
   .bg-yellow-500 {
     background-color: var(--color-yellow-500);
   }
-  .bg-cover {
-    background-size: cover;
-  }
-  .bg-center {
-    background-position: center;
-  }
   .object-cover {
     object-fit: cover;
   }
@@ -596,9 +590,6 @@
   }
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
-  }
-  .pt-16 {
-    padding-top: calc(var(--spacing) * 16);
   }
   .pr-12 {
     padding-right: calc(var(--spacing) * 12);
@@ -897,11 +888,6 @@
       padding-inline: calc(var(--spacing) * 12);
     }
   }
-  .md\:pt-24 {
-    @media (width >= 60rem) {
-      padding-top: calc(var(--spacing) * 24);
-    }
-  }
   .md\:text-left {
     @media (width >= 60rem) {
       text-align: left;
@@ -970,11 +956,6 @@
       justify-content: space-evenly;
     }
   }
-  .lg\:pt-28 {
-    @media (width >= 70rem) {
-      padding-top: calc(var(--spacing) * 28);
-    }
-  }
   .lg\:text-6xl {
     @media (width >= 70rem) {
       font-size: var(--text-6xl);
@@ -988,6 +969,11 @@
 @layer utilities {
   .bg-restaurant {
     background-image: url(./Images/background/restaurant-bcg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
   }
 }
 @layer components {
