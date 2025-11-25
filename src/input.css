@@ -7,8 +7,12 @@
 @layer utilities {
   .bg-restaurant {
     background-image: url(./Images/background/restaurant-bcg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
   }
-
 }
 
 @theme {
@@ -122,7 +126,6 @@
   .animate-slideUp {
     animation: slideUp 1s ease-out forwards;
   }
-
 
   .prev {
     @apply absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/20 py-1 px-2 rounded-full hover:bg-yellow-500/20 text-5xl text-white text-center;
