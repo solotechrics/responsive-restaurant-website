@@ -244,6 +244,10 @@ flex flex-col md:flex-row items-center md:items-center gap-4 md:gap-5;
     @apply transition-transform duration-300 hover:scale-105;
   }
 
+  .testimonial-header {
+    @apply font-bold font-bellefair text-lg
+  }
+
   html {
     scroll-behavior: smooth;
   }
