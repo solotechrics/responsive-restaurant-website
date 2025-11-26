@@ -41,21 +41,31 @@ Live demo → https://solotechrics.github.io/responsive-restaurant-website/
 
 ## 📸 Screenshots
 
-The repository includes sample images in `src/Images`. These screenshots show the shipped visuals — replace them with production-ready images when needed.
+Below are screenshots of the website's main sections and responsive views:
 
-Desktop — hero + menu
+### Homepage (Desktop)
 
-![TasteDelight — hero and menu (desktop)](screenshots/desktop-hero.svg "Desktop — hero and menu")
+![Homepage](screenshots/homepage.png)
 
-Desktop — main course showcase
+### Homepage (Mobile)
 
-![TasteDelight — main course showcase (desktop)](screenshots/main-course.svg "Desktop — main course showcase")
+![Homepage Mobile](screenshots/homepage-mobile.png)
 
-Mobile — gallery / phone preview
+### Navigation Menu (Mobile)
 
-![TasteDelight — gallery (mobile)](screenshots/mobile-gallery.svg "Mobile — gallery")
+![Mobile Navigation](screenshots/mobile-nav.png)
 
-Tip: add a `screenshots/` folder and reference its images if you want to keep README assets separate from site images.
+### Chefs Section (Desktop)
+
+![Chefs Section](screenshots/chefs-desktop.png)
+
+### Chefs Section (Mobile)
+
+![Chefs Section Mobile](screenshots/chefs-mobile.png)
+
+### Footer and Newsletter (Mobile)
+
+![Footer Newsletter](screenshots/footer-newsletter.png)
 
 ---
 
