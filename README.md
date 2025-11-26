@@ -33,41 +33,12 @@ Live demo → https://solotechrics.github.io/responsive-restaurant-website/
 ## 🚀 Highlights
 
 - Fully responsive landing layout built with Tailwind utilities
-- Clean hero / gallery / menu presentation and reservation/contact UI
+- Clean hero/gallery/menu presentation and reservation/contact UI
 - Minimal, dependency-free JavaScript for the interactive parts (menu toggle, tabs, a small carousel)
-- Works out-of-the-box — precompiled `src/output.css` included so no build is required to preview
+- Works out-of-the-box — precompiled `src/output.css` included, so no build is required to preview
 
 ---
 
-## 📸 Screenshots
-
-Below are screenshots of the website's main sections and responsive views:
-
-### Homepage (Desktop)
-
-![Homepage](screenshots/homepage.png)
-
-### Homepage (Mobile)
-
-![Homepage Mobile](screenshots/homepage-mobile.png)
-
-### Navigation Menu (Mobile)
-
-![Mobile Navigation](screenshots/mobile-nav.png)
-
-### Chefs Section (Desktop)
-
-![Chefs Section](screenshots/chefs-desktop.png)
-
-### Chefs Section (Mobile)
-
-![Chefs Section Mobile](screenshots/chefs-mobile.png)
-
-### Footer and Newsletter (Mobile)
-
-![Footer Newsletter](screenshots/footer-newsletter.png)
-
----
 
 ## 🛠️ Tech stack
 
@@ -81,7 +52,7 @@ Below are screenshots of the website's main sections and responsive views:
 ## 📁 Project structure (high level)
 
 - index.html — Main page / single-page landing
-- src/input.css — Tailwind source / utilities
+- src/input.css — Tailwind source/utilities
 - src/output.css — Precompiled CSS (included for quick preview)
 - src/script.js — Page interactions (mobile menu, carousel, tabbed sections)
 - src/Images — Images used by the site
@@ -89,12 +60,12 @@ Below are screenshots of the website's main sections and responsive views:
 
 ---
 
-## ▶️ Quick start / preview locally
+## ▶️ Quick start/preview locally
 
 No build required to preview the shipped site — simply open `index.html` in any modern browser. For a local server (recommended for accurate previews), run:
 
 ```powershell
-npx http-server . -p 8080
+npx http-server. -p 8080
 # then visit http://localhost:8080
 ```
 
@@ -109,23 +80,23 @@ npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
 
 That will watch `src/input.css` and overwrite `src/output.css` with your changes.
 
-### Generating optimized screenshots and build assets (optional)
+### Generating optimised screenshots and build assets (optional)
 
-The repository contains SVG placeholder screenshots in `screenshots/`. To generate optimized PNGs for the README, OG images, or to prepare assets for deployment, install dependencies and run the helper scripts (the project includes a small Node script that uses sharp):
+The repository contains SVG placeholder screenshots in `screenshots/`. To generate optimised PNGs for the README, OG images, or to prepare assets for deployment, install dependencies and run the helper scripts (the project includes a small Node script that uses sharp):
 
 ```powershell
 # install dependencies (this will include sharp as a devDependency)
 npm ci
 
-# build the CSS and generate optimized screenshots
+# build the CSS and generate optimised screenshots
 npm run prepare-deploy
 
 # or run each step individually
 npm run build:css
-npm run generate:screenshots
+npm run generate: screenshots
 ```
 
-If `sharp` is not installed the generator script prints a helpful message and exits — installing dependencies will make it work in CI or locally.
+If `sharp` is not installed, the generator script prints a helpful message and exits — installing dependencies will make it work in CI or locally.
 
 ---
 
@@ -133,7 +104,7 @@ If `sharp` is not installed the generator script prints a helpful message and ex
 
 - Uses semantic HTML and accessible attributes where helpful (aria-\* where applicable).
 - Built with progressive enhancement in mind — core content and navigation remain usable when JS is disabled.
-- Designed and tested on current stable versions of Chrome, Firefox, Edge and Safari. For legacy browsers provide lightweight fallbacks if required.
+- Designed and tested on current stable versions of Chrome, Firefox, Edge and Safari. For legacy browsers, provide lightweight fallbacks if required.
 
 ---
 
@@ -156,7 +127,7 @@ This project is licensed under the ISC license (see `LICENSE` and `package.json`
 
 ---
 
-## ✉️ Contact / credits
+## ✉️ Contact/credits
 
 - Author: solorics (owner: solotechrics)
 - Live demo / deployed with GitHub Pages: https://solotechrics.github.io/responsive-restaurant-website/
