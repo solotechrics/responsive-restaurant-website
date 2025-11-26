@@ -5,13 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "code": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
-
+    "code": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify",
+    "generate:screenshots": "node ./tools/generate-screenshots.js",
+    "prepare-deploy": "npm run build:css && npm run generate:screenshots || true"
   },
   "author": "solorics",
   "license": "ISC",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.17",
     "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "sharp": "^0.32.4"
   }
 }

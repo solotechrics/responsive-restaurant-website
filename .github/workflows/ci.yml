@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [Full-Webpage, main, master]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build CSS
+        run: npm run build:css
+
+      - name: Generate screenshots
+        run: npm run generate:screenshots || true
+
+      - name: Upload artifacts (screenshots)
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: screenshots/optimized/**
